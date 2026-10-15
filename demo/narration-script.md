@@ -84,7 +84,9 @@ Down the road, more roadway work gets added as modules, like pavement cutting, p
 ## 14. Plans
 Audio: `assets/audio/demo-14.mp3`
 
-Try it free with a one-time demo, then pick the plan that fits your crew. Plans and pricing will be set before launch.
+Plans will fit every crew, from a single operator to a state DOT. Plans and pricing will be set before launch.
+
+_Spoken as:_ Plans will fit every crew, from a single operator to a state D.O.T. Plans and pricing will be set before launch.
 
 ## 15. Disclaimer
 Audio: `assets/audio/demo-15.mp3`
@@ -93,9 +95,9 @@ Before you set it up, verify every layout with your local law enforcement and DO
 
 _Spoken as:_ Before you set it up, verify every layout with your local law enforcement and D.O.T. The layouts in this demo are concept mock-ups, not engineering drawings.
 
-## 16. Try it
+## 16. Coming soon
 Audio: `assets/audio/demo-16.mp3`
 
-Try QuickRoadClosure at quickroadclosure.com. Start with a free one-time demo, then choose a plan.
+QuickRoadClosure is coming soon, at quickroadclosure.com. Patent pending. Want early access or updates? Get in touch.
 
-_Spoken as:_ Try Quick Road Closure, at quick road closure dot com. Start with a free one-time demo, then choose a plan.
+_Spoken as:_ Quick Road Closure is coming soon, at quick road closure dot com. Patent pending. Want early access or updates? Get in touch.

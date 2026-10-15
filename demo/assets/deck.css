@@ -1180,3 +1180,23 @@ em.more{font-style:normal}
   .s1 .tag{font-size:min(calc(var(--u)*3),2.3vw)}
   .s1 .scene{width:min(calc(var(--u)*46),calc((100vw - var(--px)*2) * .36));right:calc(var(--px)*.6)}
 }
+
+/* last slide: large Patent Pending stamp */
+.pp-stamp{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;align-self:center;margin:calc(var(--u)*1.4) auto calc(var(--u)*.6);padding:calc(var(--u)*.9) calc(var(--u)*2.6);background:#FFD21F;color:#0E0E0E;border:5px solid #0E0E0E;outline:4px solid #FFD21F;border-radius:10px;transform:rotate(-3deg);font:700 calc(var(--u)*3.4)/0.95 var(--head);letter-spacing:.12em;text-transform:uppercase;box-shadow:0 10px 28px rgba(0,0,0,.55);width:max-content}
+.slide.active .pp-stamp.a{animation-name:stamp}
+@keyframes stamp{0%{opacity:0;transform:rotate(-3deg) scale(1.8)}70%{opacity:1;transform:rotate(-3deg) scale(.96)}100%{opacity:1;transform:rotate(-3deg) scale(1)}}
+@media (max-aspect-ratio:4/5){.pp-stamp{font-size:30px;padding:10px 26px;border-width:4px;outline-width:3px}}
+@media (max-height:500px) and (min-aspect-ratio:4/5){.pp-stamp{font-size:20px;padding:6px 18px;margin:4px auto}}
+
+/* last slide: tappable email button */
+.qrc-mailbtn{display:inline-flex;align-items:center;gap:12px;margin-top:calc(var(--u)*1);min-height:48px;padding:12px 22px;border:2px solid var(--or);border-radius:12px;background:#1a1208;color:#fff;text-decoration:none;font:500 17px/1.25 var(--body);max-width:100%;box-sizing:border-box}
+.qrc-mailbtn b{color:var(--or);font-weight:700;word-break:break-all}
+.qrc-mailbtn svg{width:24px;height:24px;flex:none;color:var(--or)}
+.qrc-mailbtn:hover,.qrc-mailbtn:focus-visible{background:var(--or);color:#111}.qrc-mailbtn:hover b,.qrc-mailbtn:focus-visible b,.qrc-mailbtn:hover svg{color:#111}
+@media (max-aspect-ratio:4/5){.qrc-mailbtn{font-size:16px;padding:12px 16px;text-align:left}}
+@media (max-height:500px) and (min-aspect-ratio:4/5){.qrc-mailbtn{min-height:40px;padding:8px 16px;font-size:15px}}
+.qrc-mailbtn b{word-break:normal;overflow-wrap:anywhere}
+@media (max-aspect-ratio:4/5){.qrc-mailbtn b{display:block}}
+@media (max-height:500px) and (min-aspect-ratio:4/5){.s10 .coneline{display:none}.s10 .url{font-size:calc(var(--u)*5.4);margin:4px 0}.s10 .qrc-contact{margin-top:4px}.pp-stamp{margin:2px auto}}
+@media (max-aspect-ratio:4/5){.s10 .url{font-size:min(calc(var(--u)*7.4),7.2vh)}.s10 .tag{font-size:min(calc(var(--u)*3),3.4vh)}}
+@media (max-aspect-ratio:4/5) and (max-height:700px){.s10 .coneline{display:none}.pp-stamp{font-size:22px;padding:6px 18px;margin:6px auto}.s10 .url{margin:6px 0}.qrc-mailbtn{padding:8px 12px;font-size:15px;min-height:44px}.s10 .qrc-contact{margin-top:6px;font-size:13px}}
