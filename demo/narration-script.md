@@ -72,9 +72,9 @@ Keep track of your trucks, signs, cones and crew across every closure. Equipment
 ## 12. Who it's for
 Audio: `assets/audio/demo-12.mp3`
 
-It's for anyone who closes a lane: DOTs, counties, utilities, contractors and lineman crews.
+It's for anyone who closes a lane: DOT, counties, utilities, contractors and lineman crews.
 
-_Spoken as:_ It's for anyone who closes a lane: D.O.T.s, counties, utilities, contractors and lineman crews.
+_Spoken as:_ It's for anyone who closes a lane: D.O.T., counties, utilities, contractors and lineman crews.
 
 ## 13. Future expansion
 Audio: `assets/audio/demo-13.mp3`
