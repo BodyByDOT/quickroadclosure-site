@@ -1,4 +1,4 @@
-/* QuickRoadClosure optional narration: sound toggle (off by default), per-slide voice, music bed.
+/* QuickRoadClosure optional narration: sound toggle (off by default; auto-on when launched from the splash Play Demo button), per-slide voice, music bed.
    Voice clips: assets/audio/<deck>-NN.mp3 (data-narration on each .slide).
    Live-update story slide: its single voice line (#story-vo) is driven by deck.js, synced to the captions.
    Music level is baked into the file (about 18 dB, roughly 13%, under the voice), so the voice stays on top even on
@@ -66,4 +66,22 @@
   btn.addEventListener('keydown',function(e){if(e.key===' '||e.key==='Enter')e.stopPropagation();}); /* let the native click toggle; don't advance the slide */
   document.addEventListener('keydown',function(e){if((e.key==='m'||e.key==='M')&&!e.metaKey&&!e.ctrlKey&&!e.altKey)toggle();});
   render();
+  /* Auto-start: the splash page's "Play Demo" click sets a one-shot flag; that click is the user gesture.
+     Opening the demo directly (no flag) keeps sound off. */
+  var auto=false; try{auto=sessionStorage.getItem('qrcAutoSound')==='1'; sessionStorage.removeItem('qrcAutoSound');}catch(e){}
+  if(auto){
+    turnOn();
+    /* if the browser still blocked playback (e.g. iOS Safari), start on the first touch/click/key; toggle stays ON and still mutes */
+    setTimeout(function(){
+      if(!S.on||!music.paused)return;
+      var evs=['pointerdown','touchstart','keydown'];
+      function kick(e){
+        evs.forEach(function(t){document.removeEventListener(t,kick,true);});
+        if(!S.on||(e&&e.target&&btn.contains(e.target)))return;
+        try{music.volume=0;}catch(x){} safePlay(music); fade(music,1,900);
+        var s=active(); if(s&&!s.querySelector('#story'))playVoice(s); else if(s&&window.qrcStory)window.qrcStory.start();
+      }
+      evs.forEach(function(t){document.addEventListener(t,kick,true);});
+    },700);
+  }
 })();

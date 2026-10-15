@@ -1160,3 +1160,15 @@ em.more{font-style:normal}
   .povtab .povsvg{inset:auto;left:-6%;top:-6%;width:112%;height:112%}
   .spov .povstage{contain:size}
 }
+/* slide 1: keep the title text and the road scene in normal flow on portrait screens so they never overlap */
+@media (max-aspect-ratio:4/5){
+  .s1{justify-content:center}
+  .s1 .titleblock{margin-top:0}
+  .s1 .wordmark{font-size:min(calc(var(--u)*10.5),9.5vh)}
+  .s1 .tag{font-size:min(calc(var(--u)*3.6),3.4vh);margin-top:1.6vh}
+  .s1 .dom{font-size:min(calc(var(--u)*1.9),2vh);margin-top:1.4vh}
+  .s1 .qrc-pp{margin-top:1.2vh}
+  .s1 .scene{position:relative;left:auto;right:auto;bottom:auto;width:100%;max-height:24vh;margin-top:2.5vh;flex:none}
+}
+/* landscape: keep the scene clear of the text column */
+@media (min-aspect-ratio:4/5){.s1 .scene{width:min(calc(var(--u)*46),36vw)}}
