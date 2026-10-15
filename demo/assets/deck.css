@@ -1172,3 +1172,11 @@ em.more{font-style:normal}
 }
 /* landscape: keep the scene clear of the text column */
 @media (min-aspect-ratio:4/5){.s1 .scene{width:min(calc(var(--u)*46),36vw)}}
+/* slide 1, wide layouts: text and road scene get separate horizontal columns so they can never intersect */
+@media (min-aspect-ratio:4/5){
+  .s1 .titleblock{max-width:calc((100% - var(--px)*2) * .6)}
+  .s1 .titleblock>*{max-width:100%}
+  .s1 .wordmark{font-size:min(calc(var(--u)*9.4),6.6vw)}
+  .s1 .tag{font-size:min(calc(var(--u)*3),2.3vw)}
+  .s1 .scene{width:min(calc(var(--u)*46),calc((100vw - var(--px)*2) * .36));right:calc(var(--px)*.6)}
+}
