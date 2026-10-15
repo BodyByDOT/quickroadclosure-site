@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- POST-FILING FLAG: change data-postfiling="off" to "on" after the patent filing to show the
+     "Patent Pending" tag and the early-access contact line. Nothing else needs to change. -->
+<html lang="en" data-postfiling="on">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>QuickRoadClosure · Drop a pin. Get a compliant closure.</title>
+<meta name="description" content="QuickRoadClosure: drop a pin, pick the setup, get the MUTCD Part 6 closure layout on the map.">
+<meta name="theme-color" content="#0E0E0E">
+<style>
+@font-face{font-family:"Oswald";src:url("assets/fonts/Oswald.ttf") format("truetype");font-weight:200 700;font-display:swap}
+@font-face{font-family:"Inter";src:url("assets/fonts/Inter.ttf") format("truetype");font-weight:100 900;font-display:swap}
+:root{--or:#FF6A00;--or2:#FF8A1F;--blk:#0E0E0E;--yel:#FFD21F;--head:"Oswald","Arial Narrow",Impact,sans-serif;--body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%;background:var(--blk);color:#fff;font-family:var(--body);-webkit-font-smoothing:antialiased}
+body{min-height:100vh;min-height:100svh;display:flex;flex-direction:column}
+.hz{height:14px;background:repeating-linear-gradient(-45deg,var(--or) 0 22px,var(--blk) 22px 44px);background-size:62.2px 62.2px;animation:march 3s linear infinite}
+@keyframes march{to{background-position:62.2px 0}}
+main{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:28px 22px 18px;gap:18px;max-width:760px;margin:0 auto;width:100%}
+.kicker{font:600 14px var(--head);letter-spacing:.16em;text-transform:uppercase;color:var(--or);display:flex;align-items:center;gap:.7em}
+.kicker::before,.kicker::after{content:"";width:2.2em;height:.42em;background:repeating-linear-gradient(-45deg,var(--or) 0 .3em,transparent .3em .6em)}
+.patent{display:none;font:700 12px var(--head);letter-spacing:.16em;text-transform:uppercase;border:2px solid var(--yel);color:var(--yel);border-radius:4px;padding:3px 10px}
+.wordmark{font:700 clamp(54px,17vw,112px)/.92 var(--head);text-transform:uppercase;letter-spacing:.01em;display:flex;flex-direction:column}
+.wordmark span{display:block;opacity:0;animation:fromLeft .7s cubic-bezier(.2,.8,.2,1) var(--d) both}
+.or{color:var(--or)}
+@media (min-width:700px){.wordmark{flex-direction:row;gap:.12em}}
+.tag{font:500 clamp(20px,6vw,30px)/1.15 var(--head);text-transform:uppercase;letter-spacing:.04em;opacity:0;animation:fadeUp .7s ease .8s both}
+.tag b{color:var(--or);font-weight:700}
+.scene{width:min(100%,420px);height:auto;margin:2px 0}
+.scene .pop{transform-box:fill-box;transform-origin:50% 100%;animation:pop .55s cubic-bezier(.3,1.6,.5,1) var(--d) both}
+.scene .drop{transform-box:fill-box;transform-origin:50% 100%;animation:drop .9s linear .5s both}
+.play{display:inline-flex;align-items:center;justify-content:center;gap:.6em;width:min(100%,360px);background:var(--or);color:#111;text-decoration:none;font:700 26px var(--head);letter-spacing:.1em;text-transform:uppercase;padding:18px 26px;border-radius:14px;box-shadow:0 7px 0 #9a3f00;transition:transform .12s,box-shadow .12s,background .2s;opacity:0;animation:fadeUp .7s ease 1.1s both}
+.play:hover{background:var(--or2)}
+.play:active{transform:translateY(5px);box-shadow:0 2px 0 #9a3f00}
+.play svg{width:28px;height:28px;flex:none}
+.sub{font-size:14px;color:#a8a8a8;line-height:1.45;max-width:36ch}
+.contact{display:none;font-size:14px;color:#cfcfcf}
+.contact a{color:var(--or);font-weight:600}
+html[data-postfiling="on"] .patent{display:inline-block}
+html[data-postfiling="on"] .contact{display:block}
+footer{padding:12px 18px 18px;text-align:center;font-size:11.5px;line-height:1.4;color:#8f8f8f;border-top:1px solid #1f1f1f;background:#0A0A0A}
+footer .dom{display:block;font:600 12px var(--body);letter-spacing:.12em;color:#bbb;margin-bottom:4px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes fromLeft{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:scale(.3)}to{opacity:1;transform:scale(1)}}
+@keyframes drop{0%{opacity:0;transform:translateY(-420%)}10%{opacity:1}55%{transform:translateY(0)}70%{transform:translateY(-14%)}85%{transform:translateY(0)}100%{opacity:1;transform:translateY(0)}}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="cone" viewBox="0 0 40 50"><rect x="2" y="44" width="36" height="5.5" rx="1.6" fill="#1a1a1a" stroke="#000" stroke-width=".6"/><path d="M17 3h6l11 41H6z" fill="#FF6A00"/><path d="M14.05 14h11.9L28 21.5H12z" fill="#fff"/><path d="M10.56 27h18.88l2 7.5H8.55z" fill="#fff"/><path d="M17 3h6l1 3.7h-8z" fill="#FF8A1F"/></symbol>
+  <symbol id="pin" viewBox="-24 -68 48 70"><path d="M0 0C-6-18-22-28-22-44a22 22 0 1 1 44 0C22-28 6-18 0 0z" fill="#FF6A00" stroke="#111" stroke-width="3"/><circle cx="0" cy="-44" r="8.5" fill="#111"/></symbol>
+</defs></svg>
+<div class="hz" aria-hidden="true"></div>
+<main>
+  <div class="kicker">Quickroadclosure.com</div>
+  <span class="patent">Patent Pending</span>
+  <h1 class="wordmark" aria-label="QuickRoadClosure"><span style="--d:.1s">Quick</span><span class="or" style="--d:.25s">Road</span><span style="--d:.4s">Closure</span></h1>
+  <p class="tag">Drop a pin. <b>Get a compliant closure.</b></p>
+  <svg class="scene" viewBox="0 0 480 210" aria-hidden="true">
+    <rect x="0" y="150" width="480" height="44" fill="#262626"/><rect x="0" y="150" width="480" height="3" fill="#fff" opacity=".8"/>
+    <line x1="0" y1="173" x2="480" y2="173" stroke="#FFD21F" stroke-width="3" stroke-dasharray="22 16"/>
+    <g transform="translate(26 32)"><g class="pop" style="--d:.9s"><line x1="34" y1="70" x2="34" y2="122" stroke="#bbb" stroke-width="4"/><path d="M34 2l32 32-32 32L2 34z" fill="#FF6A00" stroke="#111" stroke-width="3"/><path d="M34 7l27 27-27 27L7 34z" fill="none" stroke="#111" stroke-width="1.5"/><text x="34" y="27" text-anchor="middle" font-family="Oswald,sans-serif" font-weight="700" font-size="10" fill="#111">ROAD</text><text x="34" y="38" text-anchor="middle" font-family="Oswald,sans-serif" font-weight="700" font-size="10" fill="#111">WORK</text><text x="34" y="49" text-anchor="middle" font-family="Oswald,sans-serif" font-weight="700" font-size="10" fill="#111">AHEAD</text></g></g>
+    <g transform="translate(130 112)"><use class="pop" style="--d:1.2s" href="#cone" width="34" height="42"/></g>
+    <g transform="translate(190 112)"><use class="pop" style="--d:1.3s" href="#cone" width="34" height="42"/></g>
+    <g transform="translate(250 112)"><use class="pop" style="--d:1.4s" href="#cone" width="34" height="42"/></g>
+    <g transform="translate(310 112)"><use class="pop" style="--d:1.5s" href="#cone" width="34" height="42"/></g>
+    <g transform="translate(370 112)"><use class="pop" style="--d:1.6s" href="#cone" width="34" height="42"/></g>
+    <ellipse cx="440" cy="168" rx="16" ry="5" fill="#000" opacity=".5"/>
+    <g transform="translate(418 100)"><use class="drop" href="#pin" width="44" height="64"/></g>
+  </svg>
+  <a class="play" href="demo/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#111"/><path d="M10 7.5l6 4.5-6 4.5z" fill="#FF6A00"/></svg>Play Demo</a>
+  <p class="sub">An animated walkthrough of the app. Use the arrows, swipe or tap to advance.</p>
+  <p class="contact">Launching soon. Want early access or updates? <a href="mailto:readmywritings@gmail.com?subject=QRC%20updates">Get in touch</a></p>
+</main>
+<footer><span class="dom">QUICKROADCLOSURE.COM</span>Concept demo. Users are responsible for verifying every closure layout with their local law enforcement and DOT before using it.</footer>
+</body>
+</html>

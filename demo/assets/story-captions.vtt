@@ -1,0 +1,19 @@
+WEBVTT
+
+NOTE QuickRoadClosure: live-update story narration (voiceover assets/audio/story-vo.mp3). Times are from when the slide opens and match data-vo-start/data-vo-end in index.html (.cues). With sound off the slide uses its original silent timing (data-start/data-end).
+
+1
+00:00:00.400 --> 00:00:05.190
+On an active closure, a crew member sees that a sign needs to move.
+
+2
+00:00:05.290 --> 00:00:10.560
+Right there, they drag the sign to its new spot in the app and push the update.
+
+3
+00:00:10.660 --> 00:00:16.050
+The update goes out to everyone: the planner's PC in the office refreshes…
+
+4
+00:00:16.150 --> 00:00:23.360
+…and a worker at the far end gets a "Closure updated" alert, opens it and sees the change live.

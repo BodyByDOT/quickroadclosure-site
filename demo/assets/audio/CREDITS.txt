@@ -1,0 +1,3 @@
+Music: "Proud of You" by Michael Ramir C. (Mixkit track 1117), Mixkit Stock Music Free License (https://mixkit.co/license/#musicFree).
+music-proud-of-you-loop.mp3 is a level-matched, crossfaded loop of the original, mixed about 18 dB (roughly 13% level) under the narration.
+Narration: synthetic voice (Microsoft Edge TTS, en-AU-NatashaNeural, rate -8%). Script: ../../narration-script.md
