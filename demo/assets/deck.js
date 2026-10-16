@@ -53,6 +53,8 @@
   document.getElementById('deck').addEventListener('click',function(e){
     if(touched){touched=false;return;}
     if(e.target.closest('a,button'))return;
+    /* auto-play: a tap/click on the slide pauses/resumes (swipe, arrows and keys still navigate) */
+    if(window.qrcAuto){window.qrcAuto.toggle();return;}
     if(e.clientX<window.innerWidth*0.2)prev();else next();
   });
   var sx=0,sy=0,st=0;
@@ -62,6 +64,7 @@
     if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)*1.2){touched=true;setTimeout(function(){touched=false;},400);if(dx<0)next();else prev();}
     else if(Math.abs(dy)>60&&Math.abs(dy)>Math.abs(dx)*1.5){touched=true;setTimeout(function(){touched=false;},400);if(dy<0)next();else prev();}
   },{passive:true});
+  window.qrcDeck={go:go,next:next,prev:prev,n:n,cur:function(){return cur;},slides:slides};
   var h=parseInt((location.hash||'').replace('#',''),10);
   go(isNaN(h)?0:h-1);
   setTimeout(function(){hint&&hint.classList.add('hide');},6000);

@@ -1200,3 +1200,15 @@ em.more{font-style:normal}
 @media (max-height:500px) and (min-aspect-ratio:4/5){.s10 .coneline{display:none}.s10 .url{font-size:calc(var(--u)*5.4);margin:4px 0}.s10 .qrc-contact{margin-top:4px}.pp-stamp{margin:2px auto}}
 @media (max-aspect-ratio:4/5){.s10 .url{font-size:min(calc(var(--u)*7.4),7.2vh)}.s10 .tag{font-size:min(calc(var(--u)*3),3.4vh)}}
 @media (max-aspect-ratio:4/5) and (max-height:700px){.s10 .coneline{display:none}.pp-stamp{font-size:22px;padding:6px 18px;margin:6px auto}.s10 .url{margin:6px 0}.qrc-mailbtn{padding:8px 12px;font-size:15px;min-height:44px}.s10 .qrc-contact{margin-top:6px;font-size:13px}}
+/* auto-play: captions, Tap for sound, pause indicator */
+.apcap{position:fixed;left:50%;bottom:calc(var(--navh) + var(--disch,0px) + 10px);transform:translate(-50%,6px);width:max-content;max-width:min(92vw,760px);padding:6px 12px;border-radius:8px;background:rgba(10,10,10,.78);border:1px solid #2a2a2a;color:#eee;font:500 clamp(13px,3.7vw,17px)/1.35 var(--body,system-ui,sans-serif);text-align:center;z-index:12;pointer-events:none;opacity:0;transition:opacity .25s,transform .25s;text-wrap:balance}
+.apcap.show{opacity:1;transform:translate(-50%,0)}
+.aptfs{position:fixed;top:calc(env(safe-area-inset-top,0px) + 22px);right:14px;z-index:13;display:flex;align-items:center;gap:7px;appearance:none;border:2px solid var(--or,#FF6A00);background:rgba(14,14,14,.88);color:#fff;border-radius:999px;padding:7px 14px 7px 10px;font:600 13px "Oswald","Arial Narrow",sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.45);animation:aptfsPulse 2.4s ease-in-out infinite}
+.aptfs svg{width:18px;height:18px;color:var(--or,#FF6A00)}
+.aptfs.hide{display:none}
+@keyframes aptfsPulse{50%{box-shadow:0 0 0 6px rgba(255,106,0,.18),0 4px 14px rgba(0,0,0,.45)}}
+.apind{position:fixed;left:50%;top:45%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(0,0,0,.55);display:grid;place-items:center;z-index:12;pointer-events:none;opacity:0;transition:opacity .3s}
+.apind svg{width:28px;height:28px}
+.apind.show{opacity:1}
+.slide.appaused,.slide.appaused *{animation-play-state:paused!important}
+@media (prefers-reduced-motion:reduce){.aptfs{animation:none}}
