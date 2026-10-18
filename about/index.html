@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>About QuickRoadClosure · Why QuickRoadClosure Doesn't Need GPS</title>
+<meta name="description" content="Why QuickRoadClosure doesn't need GPS. Work-zone closure planning built by Ches Misso, Telecom Safety Manager, former TDOT Supervisor, &amp; Telecom Lineman.">
+<meta name="theme-color" content="#0f2340">
+<link rel="icon" href="data:,">
+<style>
+@font-face{font-family:"Oswald";src:url("../assets/fonts/Oswald.ttf") format("truetype");font-weight:200 700;font-display:swap}
+@font-face{font-family:"Inter";src:url("../assets/fonts/Inter.ttf") format("truetype");font-weight:100 900;font-display:swap}
+:root{--navy:#0f2340;--navy2:#16305a;--or:#FF6A00;--or2:#f8a46b;--ink:#1c2533;--blk:#0E0E0E;--head:"Oswald","Arial Narrow",Impact,sans-serif;--body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#f4f6f9;color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;line-height:1.5}
+.hz{height:12px;background:repeating-linear-gradient(-45deg,var(--or) 0 22px,var(--navy) 22px 44px)}
+.top{background:var(--navy);color:#fff;border-bottom:6px solid var(--or)}
+.topnav{max-width:960px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.wm{font:700 18px var(--head);letter-spacing:.06em;text-transform:uppercase;color:#fff;text-decoration:none}
+.wm span{color:var(--or)}
+.links{display:flex;gap:16px;flex-wrap:wrap}
+.links a{font:600 14px var(--head);letter-spacing:.1em;text-transform:uppercase;color:#d5deea;text-decoration:none}
+.links a:hover,.links a:focus-visible{color:var(--or)}
+header.hero{max-width:960px;margin:0 auto;padding:22px 20px 26px}
+.brand{font:600 13px var(--head);letter-spacing:.16em;text-transform:uppercase;color:var(--or2);margin-bottom:8px}
+h1{font:700 clamp(30px,7.5vw,48px)/1.08 var(--head);letter-spacing:.005em;text-transform:uppercase}
+.sub{margin-top:12px;font-size:16px;color:#d5deea;max-width:62ch}
+.actions{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:10px 18px;border-radius:10px;font:700 16px var(--head);letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.btn svg{width:20px;height:20px;flex:none}
+.btn.pri{background:var(--or);color:#111;box-shadow:0 5px 0 #9a3f00}
+.btn.pri:hover{background:#FF8A1F}
+.btn.sec{border:2px solid var(--or);color:#fff}
+.btn.sec:hover,.btn.sec:focus-visible{background:var(--or);color:#111}
+main{max-width:960px;margin:0 auto;padding:24px 20px 32px}
+.intro{font-size:17px;margin-bottom:22px;max-width:70ch}
+.grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:720px){.grid{grid-template-columns:1fr 1fr;gap:16px 26px}.pt.wide{grid-column:1 / span 2}}
+.pt{background:#fff;border-left:5px solid var(--or);border-radius:0 8px 8px 0;padding:14px 16px;box-shadow:0 1px 3px rgba(15,35,64,.08)}
+.pt h2{font:700 20px/1.2 var(--head);letter-spacing:.02em;color:var(--navy);margin-bottom:6px}
+.pt h2 span{color:var(--or);margin-right:8px}
+.pt p{font-size:15.5px}
+.bottom{margin-top:22px;background:#e6ebf2;border-radius:8px;padding:16px 18px}
+.bottom h3{font:700 20px var(--head);color:var(--navy);margin-bottom:6px;letter-spacing:.02em}
+.bottom p{font-size:15.5px}
+.credit{margin-top:24px;font-size:15px;color:#3a4658}
+.credit b{color:var(--navy)}
+footer{background:var(--navy);color:#fff;border-top:6px solid var(--or)}
+.fin{max-width:960px;margin:0 auto;padding:18px 20px 22px;display:flex;justify-content:space-between;align-items:center;gap:10px 20px;flex-wrap:wrap}
+.fin .c{font-size:16px;font-weight:700}
+.fin .c a{color:var(--or2);text-decoration:none;white-space:nowrap}
+.fin .s{font-size:13px;color:#c8d2e0}
+.fin .s a{color:#c8d2e0}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="topnav">
+    <a class="wm" href="../">Quick<span>Road</span>Closure</a>
+    <nav class="links" aria-label="Site"><a href="../">Home</a><a href="../demo/">Demo</a><a href="why-qrc-no-gps.pdf">PDF</a></nav>
+  </div>
+  <header class="hero">
+    <p class="brand">QuickRoadClosure (QRC)</p>
+    <h1>Why QuickRoadClosure Doesn't Need GPS</h1>
+    <p class="sub">Work-zone closure planning built by Ches Misso, Telecom Safety Manager, former TDOT Supervisor, &amp; Telecom Lineman.</p>
+    <div class="actions">
+      <a class="btn pri" href="why-qrc-no-gps.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Download PDF</a>
+      <a class="btn sec" href="../demo/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z" fill="currentColor"/></svg>Watch the Demo</a>
+    </div>
+  </header>
+</div>
+<div class="hz" aria-hidden="true"></div>
+<main>
+  <p class="intro">QRC helps crews plan a closure. It suggests and estimates sign and device layouts from skip-line counts and landmarks, and it tracks inventory by count. It does not depend on GPS hardware, and that is on purpose. Here is why.</p>
+  <div class="grid">
+    <div class="pt"><h2><span>1</span>A separate technology</h2><p>GPS is a different technology from QRC's approach. Most work vehicles already run GPS through fleet services like Motive or Samsara, so building it into QRC would be redundant. QRC plans placement from skip-line counts and landmarks.</p></div>
+    <div class="pt"><h2><span>2</span>Inventory by count, not trackers</h2><p>QRC inventory is a total count, or serial numbers, entered by the user. Many companies own gear with no trackers on it. That gear can still be planned for and deployed.</p></div>
+    <div class="pt"><h2><span>3</span>Focus on the task and on safety</h2><p>Tracking every cone by GPS is tedious and pulls attention off the work and off safety. QRC shows only what the current closure needs. Think of how streaming services limit the choices on screen: too many options stall a decision.</p></div>
+    <div class="pt"><h2><span>4</span>Works where signal doesn't</h2><p>Many work areas lack a reliable connection for real-time tracking. QRC is an installable app that works offline, so planning doesn't stop when the signal does.</p></div>
+    <div class="pt"><h2><span>5</span>No tracker turnover costs</h2><p>GPS units have to be pulled from broken or leased equipment and reinstalled on new equipment. QRC needs only a count or serial number in software, so companies can buy or lease from any vendor with no extra overhead.</p></div>
+    <div class="pt"><h2><span>6</span>Built for small companies</h2><p>No tracker hardware to buy, install, or move means smaller outfits benefit most on cost. A small traffic-control company can plan with the gear it already has.</p></div>
+    <div class="pt wide"><h2><span>7</span>Ready to scale worldwide</h2><p>Much of the world is far from full GPS use. Bringing QRC to a new region takes only software updates, such as local traffic-control rules and languages. No hardware is required.</p></div>
+  </div>
+  <div class="bottom">
+    <h3>Who it's for</h3>
+    <p>DOT decision makers, contractors, and small traffic-control companies who want a straightforward way to plan closures with the equipment and fleet tools they already use. QRC suggests layouts; crews and supervisors make the final call in the field.</p>
+  </div>
+  <p class="credit"><b>Ches Misso, Telecom Safety Manager, former TDOT Supervisor, &amp; Telecom Lineman.</b></p>
+</main>
+<footer>
+  <div class="fin">
+    <div class="c">QuickRoadClosure &nbsp;|&nbsp; Business line: <a href="tel:+16159338254">(615) 933-8254</a></div>
+    <div class="s">Patent pending &nbsp;·&nbsp; <a href="../demo/">Demo</a> &nbsp;·&nbsp; <a href="../">Home</a></div>
+  </div>
+</footer>
+</body>
+</html>

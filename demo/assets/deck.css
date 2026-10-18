@@ -1212,3 +1212,18 @@ em.more{font-style:normal}
 .apind.show{opacity:1}
 .slide.appaused,.slide.appaused *{animation-play-state:paused!important}
 @media (prefers-reduced-motion:reduce){.aptfs{animation:none}}
+/* About link (nav bar) + last-slide builder credit, 2026-10-18 */
+.nav .about-mini{flex:none;font:600 12px var(--head);letter-spacing:.12em;text-transform:uppercase;color:#9a9a9a;text-decoration:none;padding:6px 8px;border:1px solid #2a2a2a;border-radius:6px;line-height:1;white-space:nowrap}
+.nav .about-mini:hover,.nav .about-mini:focus-visible{color:#fff;border-color:var(--or);outline:none}
+.s10 .qrc-builtby{margin:calc(var(--u)*1) auto 0;max-width:74ch;font-size:12.5px;line-height:1.45;color:#9a9a9a;text-align:center}
+.s10 .qrc-builtby a{color:#cfcfcf;text-decoration:none;white-space:nowrap}
+.s10 .qrc-builtby a:hover{color:var(--or)}
+@media (min-aspect-ratio:4/5) and (min-height:501px){.s10 .coneline{margin-bottom:calc(var(--u)*.8)}.s10 .pp-stamp{margin-top:calc(var(--u)*.9)}}
+@media (max-aspect-ratio:4/5){.nav .about-mini{font-size:11px;padding:5px 6px;letter-spacing:.08em}
+  .s10 .qrc-builtby{font-size:11px;line-height:1.4;max-width:none;margin-top:8px}
+  .s10 .coneline{margin-bottom:6px}.s10 .coneline svg{width:calc(var(--u)*4)}
+  .s10 .tag{font-size:min(calc(var(--u)*2.6),3vh)}
+  .s10 .pp-stamp{margin:8px auto 4px}
+  .s10{padding-bottom:calc(var(--navh) + var(--disch) + var(--u)*2 + 30px)}}
+@media (max-height:500px) and (min-aspect-ratio:4/5){.s10 .qrc-builtby{font-size:10.5px;margin-top:3px}}
+@media (max-aspect-ratio:4/5) and (max-height:700px){.s10 .qrc-builtby{font-size:10.5px;margin-top:4px}}

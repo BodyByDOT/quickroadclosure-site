@@ -8,9 +8,9 @@ Where the spoken text differs from the written line (acronyms spelled out, URL s
 ## 01. Title
 Audio: `assets/audio/demo-01.mp3`
 
-This is QuickRoadClosure. Drop a pin, and get a compliant closure.
+This is QuickRoadClosure. Drop a pin, and get a suggested closure layout.
 
-_Spoken as:_ This is Quick Road Closure. Drop a pin, and get a compliant closure.
+_Spoken as:_ This is Quick Road Closure. Drop a pin, and get a suggested closure layout.
 
 ## 02. Features
 Audio: `assets/audio/demo-02.mp3`

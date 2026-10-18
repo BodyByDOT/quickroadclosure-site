@@ -12,7 +12,7 @@
   var DUR=[6.24,11.616,12.528,11.616,10.152,12.048,13.128,11.688,12.096,null,11.352,8.232,8.952,8.712,12.456,12.048];
   var STORY_MUTED=17.0, STORY_VO=23.36;
   var TXT=[
-    "This is QuickRoadClosure. Drop a pin, and get a compliant closure.",
+    "This is QuickRoadClosure. Drop a pin, and get a suggested closure layout.",
     "Everything for the closure is in one app. Drop a pin, pick your setup, and get the MUTCD Part 6 layout with your state's rules already applied.",
     "Pin it, pick it, set it. Drop a pin, pick the closure, and the app lays out the cones and signs MUTCD Part 6 calls for, locked to the road when you zoom.",
     "Here's a lane closure on Main Street with a flagger. Hit generate, and the advance warning signs, the cone taper and the flagger station land right on the map.",
