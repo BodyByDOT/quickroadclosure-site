@@ -1298,3 +1298,8 @@ em.more{font-style:normal}
   .sg-btn{min-height:36px;padding:5px 12px;font-size:13px}
   .sg .sg-em{font-size:15px}
 }
+/* QRC diamond logo in nav, 2026-10-18 */
+.nav .logo-mini{flex:none;width:34px;height:34px;display:block}
+@media (max-aspect-ratio:4/5){.nav .logo-mini{width:28px;height:28px}}
+@media (max-aspect-ratio:4/5) and (max-width:520px){.nav .logo-mini{display:none}}
+@media (max-height:500px) and (min-aspect-ratio:4/5){.nav .logo-mini{width:28px;height:28px}}
