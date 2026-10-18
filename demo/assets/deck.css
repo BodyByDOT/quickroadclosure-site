@@ -1227,3 +1227,74 @@ em.more{font-style:normal}
   .s10{padding-bottom:calc(var(--navh) + var(--disch) + var(--u)*2 + 30px)}}
 @media (max-height:500px) and (min-aspect-ratio:4/5){.s10 .qrc-builtby{font-size:10.5px;margin-top:3px}}
 @media (max-aspect-ratio:4/5) and (max-height:700px){.s10 .qrc-builtby{font-size:10.5px;margin-top:4px}}
+
+/* slide 17: Why QuickRoadClosure Doesn't Need GPS (summary of ../about/) */
+.sg{justify-content:center;gap:clamp(8px,1.8vh,18px)}
+.sg .sg-head{max-width:1100px}
+.sg .sg-top{display:flex;align-items:center;gap:14px 18px;flex-wrap:wrap;margin-bottom:clamp(6px,1.2vh,12px)}
+.sg .kicker{margin:0}
+.sg-pp{display:inline-block;background:#FFD21F;color:#0f2340;font:700 clamp(13px,2.1vh,18px)/1 var(--head);letter-spacing:.08em;text-transform:uppercase;padding:7px 13px;border:3px solid #0f2340;border-radius:7px;box-shadow:0 0 0 3px #FFD21F;transform:rotate(-3deg);white-space:nowrap}
+.slide.active .sg-pp.a{animation-name:stamp}
+.sg h2{font-size:clamp(26px,min(5.2vh,3.6vw),46px);max-width:none;line-height:1.04}
+.sg .sg-sub{margin-top:clamp(5px,1vh,10px);font-size:clamp(13px,2.2vh,18px);line-height:1.4;color:#cfcfcf;max-width:72ch}
+.sg .sg-pts{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(8px,1.5vh,14px);max-width:1180px}
+.sg .sg-pts li{background:#161009;border-left:4px solid var(--or);border-radius:0 8px 8px 0;padding:clamp(8px,1.4vh,13px) clamp(10px,1.2vw,14px);font-size:inherit}
+.sg .sg-pts h3{font-size:clamp(15px,2.6vh,21px);line-height:1.15;letter-spacing:.02em;color:#fff;margin-bottom:5px}
+.sg .sg-pts h3 span{color:var(--or);margin-right:7px}
+.sg .sg-pts p{font-size:clamp(12.5px,2.15vh,17px);line-height:1.38;color:#d6d6d6}
+.sg .sg-foot{display:flex;align-items:center;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;max-width:1180px}
+.sg .sg-act{display:flex;gap:10px 14px;flex-wrap:wrap}
+.sg-btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:9px 16px;border-radius:10px;font:700 15px var(--head);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+.sg-btn svg{width:19px;height:19px;flex:none}
+.sg-btn.pri{background:var(--or);color:#111;box-shadow:0 4px 0 #9a3f00}
+.sg-btn.pri:hover,.sg-btn.pri:focus-visible{background:#FF8A1F}
+.sg-btn.sec{border:2px solid var(--or);color:#fff}
+.sg-btn.sec:hover,.sg-btn.sec:focus-visible{background:var(--or);color:#111}
+.sg .sg-con{font-size:13px;line-height:1.3;color:#9a9a9a;text-align:right}
+.sg .sg-em{display:block;font:700 19px var(--body);color:var(--or2,#f8a46b);text-decoration:none}
+.sg .sg-em:hover{color:var(--or)}
+.sg .sg-tel{display:block;font-size:12px;margin-top:2px}
+.sg .sg-tel a{color:#bdbdbd;text-decoration:none;white-space:nowrap}
+@media (max-width:1000px) and (min-aspect-ratio:4/5){.sg .sg-pts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sg .sg-pts p{font-size:13px}}
+/* phones (portrait) */
+@media (max-aspect-ratio:4/5){
+  .sg{justify-content:flex-start;gap:7px;padding-top:calc(env(safe-area-inset-top,0px) + 70px);padding-bottom:calc(var(--navh) + var(--disch) + 46px)}
+  .sg .sg-top{margin-bottom:6px;gap:10px 12px}
+  .sg .kicker{font-size:12px}
+  .sg-pp{font-size:13px;padding:5px 10px;border-width:2px;box-shadow:0 0 0 2px #FFD21F}
+  .sg h2{font-size:clamp(22px,7.2vw,30px)}
+  .sg .sg-sub{font-size:12.5px;line-height:1.35;margin-top:5px}
+  .sg .sg-pts{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+  .sg .sg-x{display:none}
+  .sg .sg-pts li{padding:6px 8px 7px 9px;border-left-width:3px}
+  .sg .sg-pts h3{font-size:14px;line-height:1.12;margin-bottom:2px}
+  .sg .sg-pts h3 span{margin-right:5px}
+  .sg .sg-pts p{font-size:12px;line-height:1.32}
+  .sg .sg-foot{flex-direction:column;align-items:stretch;gap:8px}
+  .sg .sg-act{gap:8px}
+  .sg-btn{flex:1 1 0;justify-content:center;min-height:40px;padding:8px 10px;font-size:14px;letter-spacing:.06em}
+  .sg .sg-con{text-align:center;font-size:12px}
+  .sg .sg-em{font-size:16px;line-height:1.25}
+  .sg .sg-tel{font-size:11px}
+}
+@media (max-aspect-ratio:4/5) and (max-height:720px){
+  .sg{padding-top:calc(env(safe-area-inset-top,0px) + 54px);gap:6px}
+  .sg .sg-sub{display:none}
+  .sg .sg-pts p{font-size:11.5px}
+}
+/* short landscape (phones on their side) */
+@media (max-height:500px) and (min-aspect-ratio:4/5){
+  .sg{gap:5px;padding-top:8px;justify-content:flex-start;padding-bottom:calc(var(--navh) + var(--disch) + 8px)}
+  html:has(.sg.active) .apcap{display:none} /* no room for the caption bar on a phone held sideways */
+  .sg .sg-top{margin-bottom:2px}
+  .sg-pp{font-size:12px;padding:4px 9px;border-width:2px;box-shadow:0 0 0 2px #FFD21F}
+  .sg h2{font-size:20px}
+  .sg .sg-sub,.sg .sg-x{display:none}
+  .sg .sg-pts{gap:4px 6px}
+  .sg .sg-pts li{padding:3px 8px 4px}
+  .sg .sg-pts h3{font-size:13px;margin-bottom:2px}
+  .sg .sg-pts p{font-size:11px;line-height:1.28}
+  .sg-btn{min-height:36px;padding:5px 12px;font-size:13px}
+  .sg .sg-em{font-size:15px}
+}

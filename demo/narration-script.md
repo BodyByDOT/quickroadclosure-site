@@ -101,3 +101,8 @@ Audio: `assets/audio/demo-16.mp3`
 QuickRoadClosure is coming soon, at quickroadclosure.com. Patent pending. Want early access or updates? Get in touch.
 
 _Spoken as:_ Quick Road Closure is coming soon, at quick road closure dot com. Patent pending. Want early access or updates? Get in touch.
+
+## 17. Why QuickRoadClosure doesn't need GPS
+Audio: none (caption only). Auto-play holds this slide about 14 s (13.0 s read time + 1 s gap), then loops back to slide 1. The music bed keeps playing.
+
+Caption: Why QuickRoadClosure doesn't need GPS.

@@ -9,7 +9,8 @@
   var music=document.getElementById('qrc-music'), voice=document.getElementById('qrc-voice'), svo=document.getElementById('story-vo'), sndBtn=document.getElementById('sound');
   var GAP=1.0;
   /* clip durations (s) from the mp3s; story slide: muted timing ends 17.0 s, voiced 23.36 s */
-  var DUR=[6.24,11.616,12.528,11.616,10.152,12.048,13.128,11.688,12.096,null,11.352,8.232,8.952,8.712,12.456,12.048];
+  var DUR=[6.24,11.616,12.528,11.616,10.152,12.048,13.128,11.688,12.096,null,11.352,8.232,8.952,8.712,12.456,12.048,13.0];
+  /* slide 17 (Why QRC doesn't need GPS) has no narration clip: 13.0 s caption-only read time + GAP = 14 s on screen, then the loop restarts */
   var STORY_MUTED=17.0, STORY_VO=23.36;
   var TXT=[
     "This is QuickRoadClosure. Drop a pin, and get a suggested closure layout.",
@@ -27,7 +28,8 @@
     "Down the road, more roadway work gets added as modules, like pavement cutting, paving, striping and culvert replacement.",
     "Plans will fit every crew, from a single operator to a state DOT. Plans and pricing will be set before launch.",
     "Before you set it up, verify every layout with your local law enforcement and DOT. The layouts in this demo are concept mock-ups, not engineering drawings.",
-    "QuickRoadClosure is coming soon, at quickroadclosure.com. Patent pending. Want early access or updates? Get in touch."
+    "QuickRoadClosure is coming soon, at quickroadclosure.com. Patent pending. Want early access or updates? Get in touch.",
+    "Why QuickRoadClosure doesn't need GPS."
   ];
   /* sentence cues, timed by length across the clip (0.25 s lead-in) */
   function cuesFor(i){
